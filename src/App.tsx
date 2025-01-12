@@ -7,7 +7,7 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const fetchSearchResults = async (
     query: string,
-    repacks: string[] = ["steamrip", "fitgirl", "dodi", "xatab"]
+    repacks: string[] = ["xatab", "steamrip", "dodi", "fitgirl"]
   ) => {
     try {
       setLoading(true);

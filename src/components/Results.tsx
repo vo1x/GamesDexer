@@ -6,14 +6,12 @@ type SearchResultsProps = {
 
 const ResultCard: React.FC<{ result: any }> = ({ result }) => {
   return (
-    <div className="bg-[#161B2E] border rounded-lg border-slate-700 p-4 flex items-center justify-between">
+    <div className="bg-[#161B2E] border rounded-lg border-slate-700 p-4 flex items-center justify-between h-max">
       <div className="overflow-hidden">
-        <h1 className="truncate max-w-lg text-lg font-semibold">
-          {result.name}
-        </h1>
+        <h1 className=" max-w-xl text-lg font-semibold py-2">{result.name}</h1>
 
-        <div className="flex items-center gap-4">
-          <span className=" text-slate-400">{result.version || "Unkown"}</span>
+        <div className="flex items-center gap-6">
+          {/* <span className=" text-slate-400">{result.version || "Unkown"}</span> */}
           <a
             className=" text-slate-400"
             href={`https://${result.source}`}

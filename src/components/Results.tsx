@@ -1,5 +1,4 @@
-import { SquareArrowOutUpRight, Loader2 } from "lucide-react";
-import { useState } from "react";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 type SearchResultsProps = {
   results: any[];
@@ -32,7 +31,6 @@ const ResultCard: React.FC<{ result: any }> = ({ result }) => {
 };
 
 const Results: React.FC<SearchResultsProps> = ({ results }) => {
-
   return (
     <div className="custom-scrollbar relative pr-2 flex flex-col space-y-4 max-h-1/2 overflow-y-scroll max-w-3xl w-full">
       {results.map((result: any) => (

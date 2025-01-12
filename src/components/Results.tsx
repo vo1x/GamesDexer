@@ -11,7 +11,7 @@ const ResultCard: React.FC<{ result: any }> = ({ result }) => {
         <h1 className=" max-w-xl text-lg font-semibold py-2">{result.name}</h1>
 
         <div className="flex items-center gap-6">
-          {/* <span className=" text-slate-400">{result.version || "Unkown"}</span> */}
+          <span className=" text-slate-400">{result.date || "Unkown"}</span>
           <a
             className=" text-slate-400"
             href={`https://${result.source}`}

@@ -7,12 +7,12 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const fetchSearchResults = async (
     query: string,
-    repacks: string[] = ["steamrip", "fitgirl"]
+    repacks: string[] = ["steamrip", "fitgirl", "dodi", "xatab"]
   ) => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3000/search?q=${encodeURIComponent(
+        `https://apidexer.vercel.app/search?q=${encodeURIComponent(
           query
         )}&repacks=${encodeURIComponent(repacks.join(","))}`
       );

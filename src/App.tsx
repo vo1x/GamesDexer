@@ -1,6 +1,6 @@
 import { Loader2, Search } from "lucide-react";
 import Results from "./components/Results";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, KeyboardEvent } from "react";
 
 function App() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -53,6 +53,11 @@ function App() {
               }
               placeholder="Search any game"
               className="w-full rounded-full bg-[#0F131F] p-2 px-4 text-lg outline-none"
+              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+                if (e.key === "Enter") {
+                  fetchSearchResults(inputValue);
+                }
+              }}
             />
           </div>
         </div>
